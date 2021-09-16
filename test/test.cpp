@@ -10,8 +10,10 @@ int main()
    Vector<F,I> v(size);
    Vector<F,I> v1(size,val);
    Vector<F,I> v2 = {1,2,3,4,5};
-   cout<<v<<endl;
-   cout<<v1<<endl;
-   cout<<v2<<endl;
+   cout<<val*v<<endl;
+   v1 = v2;
+   cout<<v1[2]<<endl;
+   cout<<(v2*val)[2]<<endl;
+   cout<<v2*v1[2]<<endl;
    return 0;
 }

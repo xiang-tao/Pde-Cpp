@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/algebra/Vector.h
+iostream
+-
+algorithm
+-
+cassert
+-
+cmath
+-
+initializer_list
+-
+
+/home/xt/github/Pde-Cpp/test/test.cpp
+iostream
+-
+algebra/Vector.h
+/home/xt/github/Pde-Cpp/test/algebra/Vector.h
+
