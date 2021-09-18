@@ -1,7 +1,8 @@
 #ifndef Vector_h
 #define Vector_h
 /*
-此文件作用：创建一个数学中的向量，使用c++类和模板进行实现
+此文件作用：创建一个数学中的向量，使用c++结构体和模板进行实现
+结构体:重写拷贝构造函数，重载赋值"="函数
 */
 #include <iostream>
 #include <algorithm>
@@ -24,7 +25,8 @@ struct Vector
      */
     Vector()
     {
-        data = NULL;
+        //data = NULL;
+        data = nullptr;
         size = 0;
     }
 
@@ -86,7 +88,7 @@ struct Vector
     //因此要自己重新写。使用方式Vector v = v1; or Vector v(v1);    
     Vector(const Vector &v)
     {
-        std::cout<<"拷贝构造调用"<<std::endl;
+        //std::cout<<"拷贝构造调用"<<std::endl;
     	this->size = v.size;
     	this->data = new F[this->size];
     	for(int i=0;i<this->size;i++)
@@ -105,7 +107,7 @@ struct Vector
     //析构函数，释放内存空间
     ~Vector()
     {
-        if(data != NULL)
+        if(data != nullptr)
             delete [] data;
     }
 

@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+../include/algebra/Algebra_kernel.h
+Matrix.h
+../include/algebra/Matrix.h
+Vector.h
+../include/algebra/Vector.h
+
+../include/algebra/Matrix.h
+cmath
+-
+cassert
+-
+iostream
+-
+initializer_list
+-
+string
+-
+
 ../include/algebra/Vector.h
 iostream
 -
@@ -21,6 +39,6 @@ initializer_list
 /home/xt/github/Pde-Cpp/test/test.cpp
 iostream
 -
-algebra/Vector.h
-/home/xt/github/Pde-Cpp/test/algebra/Vector.h
+algebra/Algebra_kernel.h
+/home/xt/github/Pde-Cpp/test/algebra/Algebra_kernel.h
 
