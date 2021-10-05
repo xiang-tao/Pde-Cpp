@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/animation.dir/animation.cpp.o  -o animation  -lpython3.8 

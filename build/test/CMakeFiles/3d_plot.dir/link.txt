@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/3d_plot.dir/3d_plot.cpp.o  -o 3d_plot  -lpython3.8 

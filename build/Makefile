@@ -111,6 +111,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named hello
+
+# Build rule for target.
+hello: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hello
+.PHONY : hello
+
+# fast build rule for target.
+hello/fast:
+	$(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/build
+.PHONY : hello/fast
+
+#=============================================================================
+# Target rules for targets named 3d_plot
+
+# Build rule for target.
+3d_plot: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 3d_plot
+.PHONY : 3d_plot
+
+# fast build rule for target.
+3d_plot/fast:
+	$(MAKE) -f test/CMakeFiles/3d_plot.dir/build.make test/CMakeFiles/3d_plot.dir/build
+.PHONY : 3d_plot/fast
+
+#=============================================================================
+# Target rules for targets named animation
+
+# Build rule for target.
+animation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 animation
+.PHONY : animation
+
+# fast build rule for target.
+animation/fast:
+	$(MAKE) -f test/CMakeFiles/animation.dir/build.make test/CMakeFiles/animation.dir/build
+.PHONY : animation/fast
+
+#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -131,6 +170,9 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... hello"
+	@echo "... 3d_plot"
+	@echo "... animation"
 	@echo "... test"
 .PHONY : help
 

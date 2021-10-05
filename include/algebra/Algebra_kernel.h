@@ -1,6 +1,8 @@
+#pragma once
 #include "Matrix.h"
 #include "Vector.h"
-//using namespace PDECPP::AlgebraObject;
+#include "linalg.h"
+using namespace PDECPP::AlgebraAlgrithom;
 using F = double;
 using I = int;
 using Vector =  PDECPP::AlgebraObject::Vector<F,I>;

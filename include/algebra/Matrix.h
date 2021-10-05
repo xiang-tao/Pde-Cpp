@@ -47,27 +47,19 @@ struct Matrix
     
     Matrix<F,I>& operator = (const Matrix<F, I> & rhs)
     {
-    	//std::cout<<"赋值函数调用"<<std::endl;
-
-	    if(data != nullptr)
-	    {
-	    	delete [] data;
-            data = nullptr;
-	    	shape[0] = 0;
-	    	shape[1] = 0;
-	    }
-	    
-	    shape[0] = rhs.shape[0];
-	    shape[1] = rhs.shape[1];
-	    
-	    data = new F*[shape[0]];
-        for(I i=0; i < shape[0]; i++)
+	    if(this->shape[0] != rhs.shape[0] || this->shape[1] != rhs.shape[1])
         {
-            data[i] = new F[shape[1]];
-            for(I j = 0; j < shape[1]; j++)
-                data[i][j] = rhs.data[i][j];
+            std::cout<<"维度不一致，不能够赋值"<<std::endl;
+            assert(0);
         }
-	    
+	    if(this != &rhs)
+        {                      
+            for(I i=0; i < shape[0]; i++)
+            {
+                for(I j = 0; j < shape[1]; j++)
+                    data[i][j] = rhs.data[i][j];
+            }
+        }	    
 	    return *this;   
     }
 
@@ -76,6 +68,7 @@ struct Matrix
     {
         this->shape[0] = rhs.shape[0];
         this->shape[1] = rhs.shape[1];
+
         data = new F*[shape[0]];
         for(I i=0; i < shape[0]; i++)
         {

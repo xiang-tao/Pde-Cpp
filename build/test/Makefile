@@ -111,6 +111,51 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+test/CMakeFiles/hello.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/hello.dir/rule
+.PHONY : test/CMakeFiles/hello.dir/rule
+
+# Convenience name for target.
+hello: test/CMakeFiles/hello.dir/rule
+
+.PHONY : hello
+
+# fast build rule for target.
+hello/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/build
+.PHONY : hello/fast
+
+# Convenience name for target.
+test/CMakeFiles/3d_plot.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/3d_plot.dir/rule
+.PHONY : test/CMakeFiles/3d_plot.dir/rule
+
+# Convenience name for target.
+3d_plot: test/CMakeFiles/3d_plot.dir/rule
+
+.PHONY : 3d_plot
+
+# fast build rule for target.
+3d_plot/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/3d_plot.dir/build.make test/CMakeFiles/3d_plot.dir/build
+.PHONY : 3d_plot/fast
+
+# Convenience name for target.
+test/CMakeFiles/animation.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/animation.dir/rule
+.PHONY : test/CMakeFiles/animation.dir/rule
+
+# Convenience name for target.
+animation: test/CMakeFiles/animation.dir/rule
+
+.PHONY : animation
+
+# fast build rule for target.
+animation/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/animation.dir/build.make test/CMakeFiles/animation.dir/build
+.PHONY : animation/fast
+
+# Convenience name for target.
 test/CMakeFiles/test.dir/rule:
 	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test.dir/rule
 .PHONY : test/CMakeFiles/test.dir/rule
@@ -124,6 +169,87 @@ test: test/CMakeFiles/test.dir/rule
 test/fast:
 	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/test.dir/build.make test/CMakeFiles/test.dir/build
 .PHONY : test/fast
+
+3d_plot.o: 3d_plot.cpp.o
+
+.PHONY : 3d_plot.o
+
+# target to build an object file
+3d_plot.cpp.o:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/3d_plot.dir/build.make test/CMakeFiles/3d_plot.dir/3d_plot.cpp.o
+.PHONY : 3d_plot.cpp.o
+
+3d_plot.i: 3d_plot.cpp.i
+
+.PHONY : 3d_plot.i
+
+# target to preprocess a source file
+3d_plot.cpp.i:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/3d_plot.dir/build.make test/CMakeFiles/3d_plot.dir/3d_plot.cpp.i
+.PHONY : 3d_plot.cpp.i
+
+3d_plot.s: 3d_plot.cpp.s
+
+.PHONY : 3d_plot.s
+
+# target to generate assembly for a file
+3d_plot.cpp.s:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/3d_plot.dir/build.make test/CMakeFiles/3d_plot.dir/3d_plot.cpp.s
+.PHONY : 3d_plot.cpp.s
+
+animation.o: animation.cpp.o
+
+.PHONY : animation.o
+
+# target to build an object file
+animation.cpp.o:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/animation.dir/build.make test/CMakeFiles/animation.dir/animation.cpp.o
+.PHONY : animation.cpp.o
+
+animation.i: animation.cpp.i
+
+.PHONY : animation.i
+
+# target to preprocess a source file
+animation.cpp.i:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/animation.dir/build.make test/CMakeFiles/animation.dir/animation.cpp.i
+.PHONY : animation.cpp.i
+
+animation.s: animation.cpp.s
+
+.PHONY : animation.s
+
+# target to generate assembly for a file
+animation.cpp.s:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/animation.dir/build.make test/CMakeFiles/animation.dir/animation.cpp.s
+.PHONY : animation.cpp.s
+
+hello.o: hello.cpp.o
+
+.PHONY : hello.o
+
+# target to build an object file
+hello.cpp.o:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/hello.cpp.o
+.PHONY : hello.cpp.o
+
+hello.i: hello.cpp.i
+
+.PHONY : hello.i
+
+# target to preprocess a source file
+hello.cpp.i:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/hello.cpp.i
+.PHONY : hello.cpp.i
+
+hello.s: hello.cpp.s
+
+.PHONY : hello.s
+
+# target to generate assembly for a file
+hello.cpp.s:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/hello.cpp.s
+.PHONY : hello.cpp.s
 
 test.o: test.cpp.o
 
@@ -158,9 +284,21 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... hello"
 	@echo "... rebuild_cache"
+	@echo "... 3d_plot"
+	@echo "... animation"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... 3d_plot.o"
+	@echo "... 3d_plot.i"
+	@echo "... 3d_plot.s"
+	@echo "... animation.o"
+	@echo "... animation.i"
+	@echo "... animation.s"
+	@echo "... hello.o"
+	@echo "... hello.i"
+	@echo "... hello.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

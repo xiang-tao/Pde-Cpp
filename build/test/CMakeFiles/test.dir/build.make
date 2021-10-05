@@ -79,6 +79,7 @@ test_EXTERNAL_OBJECTS =
 
 test/test: test/CMakeFiles/test.dir/test.cpp.o
 test/test: test/CMakeFiles/test.dir/build.make
+test/test: /usr/lib/x86_64-linux-gnu/libpython3.8.so
 test/test: test/CMakeFiles/test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xt/github/Pde-Cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test"
 	cd /home/xt/github/Pde-Cpp/build/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)

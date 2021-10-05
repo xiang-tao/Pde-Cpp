@@ -63,14 +63,15 @@ struct Vector
     v = v1;此处才会调用重载的“=”函数
     */
     Vector<F,I>& operator = (const Vector<F, I> & rhs)
-    {
-        // constructassert( this->size == rhs.size );//判断维度是否一致，不一致的话报错并终止程序。	    
-	    if(this->size != rhs.size)
+    {	 
+        //此处由于判断了维度是否一致问题，因此后续的过程是维度是
+        //一致的，可以不用再次判断是否为空指针再用new新建内存，
+        //这里没有必要这样做，但是在其他场合例如当维度不一致都可
+        //以进行赋值时候就有必要判断是否为nullptr，再使用new。   
+        if(this->size != rhs.size)
 	    {
-            //注意此处需要改进，应该终止程序报错，若不满足上述条件
-            //但就目前而言，先使用此方法。
 	    	std::cout<<"维度不一致，不能赋值"<<std::endl;
-	    	return *this;
+	    	assert(0); //终止程序
 	    }
         else
         {
@@ -91,10 +92,11 @@ struct Vector
         //std::cout<<"拷贝构造调用"<<std::endl;
     	this->size = v.size;
     	this->data = new F[this->size];
-    	for(int i=0;i<this->size;i++)
-    	{
-    	     this->data[i] = v.data[i];
-    	}
+        std::copy_n(v.data, v.size, this->data);
+    	// for(int i=0;i<this->size;i++)
+    	// {
+    	//      this->data[i] = v.data[i];
+    	// }
     }
     
     void init(F val=0.0)
@@ -109,6 +111,14 @@ struct Vector
     {
         if(data != nullptr)
             delete [] data;
+    }
+
+    F norm() const
+    {
+        F sum = 0.0;
+        for(I i=0; i < size; i++)
+            sum += data[i]*data[i];
+        return std::sqrt(sum);
     }
 
     F & operator[](const I i) 

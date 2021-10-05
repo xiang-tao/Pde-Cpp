@@ -1,5 +1,8 @@
 /home/xt/github/Pde-Cpp/build/CMakeFiles/rebuild_cache.dir
 /home/xt/github/Pde-Cpp/build/CMakeFiles/edit_cache.dir
+/home/xt/github/Pde-Cpp/build/test/CMakeFiles/hello.dir
 /home/xt/github/Pde-Cpp/build/test/CMakeFiles/rebuild_cache.dir
+/home/xt/github/Pde-Cpp/build/test/CMakeFiles/3d_plot.dir
+/home/xt/github/Pde-Cpp/build/test/CMakeFiles/animation.dir
 /home/xt/github/Pde-Cpp/build/test/CMakeFiles/edit_cache.dir
 /home/xt/github/Pde-Cpp/build/test/CMakeFiles/test.dir
