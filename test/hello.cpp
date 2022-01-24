@@ -3,7 +3,9 @@
 using namespace std;
 int main()
 {
-    Vector v;
-    cout<<sizeof(v)<<endl;
+    double d = 1.0;
+    double a = 3.0;
+    double c = d / a;
+    cout << c << endl;
     return 0;
 }

@@ -6,6 +6,40 @@
 
 #IncludeRegexTransform: 
 
+../include/algebra/Algebra_kernel.h
+Matrix.h
+../include/algebra/Matrix.h
+Vector.h
+../include/algebra/Vector.h
+linalg.h
+../include/algebra/linalg.h
+
+../include/algebra/Matrix.h
+cmath
+-
+cassert
+-
+iostream
+-
+initializer_list
+-
+string
+-
+
+../include/algebra/Vector.h
+iostream
+-
+algorithm
+-
+cassert
+-
+cmath
+-
+initializer_list
+-
+
+../include/algebra/linalg.h
+
 ../include/thirdparty/matplotlibcpp.h
 Python.h
 -
@@ -34,11 +68,15 @@ numpy/arrayobject.h
 opencv2/opencv.hpp
 -
 
-/home/xt/github/Pde-Cpp/test/animation.cpp
-cmath
+/home/xt/github/Pde-Cpp/test/cmp.cpp
+iostream
+-
+fstream
 -
 thirdparty/matplotlibcpp.h
 /home/xt/github/Pde-Cpp/test/thirdparty/matplotlibcpp.h
+algebra/Algebra_kernel.h
+/home/xt/github/Pde-Cpp/test/algebra/Algebra_kernel.h
 
 /usr/include/python3.8/Python.h
 patchlevel.h

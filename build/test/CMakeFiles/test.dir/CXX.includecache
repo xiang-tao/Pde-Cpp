@@ -401,11 +401,11 @@ old_defines.h
 /usr/include/python3.8/numpy/old_defines.h
 
 /usr/include/python3.8/numpy/npy_common.h
+Python.h
+-
 numpyconfig.h
 /usr/include/python3.8/numpy/numpyconfig.h
 npy_config.h
--
-Python.h
 -
 io.h
 -
@@ -419,8 +419,6 @@ limits.h
 /usr/include/python3.8/numpy/npy_cpu.h
 numpyconfig.h
 /usr/include/python3.8/numpy/numpyconfig.h
-string.h
--
 
 /usr/include/python3.8/numpy/npy_endian.h
 endian.h

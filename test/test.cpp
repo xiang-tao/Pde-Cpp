@@ -31,7 +31,7 @@ int main()
    jacobi(A, b, x);
 
    ofstream ofs;
-	ofs.open("data.dat", ios::out);
+   ofs.open("data.dat", ios::out);
    ofs<<"x"<<" "<<"y1"<<endl;
    for(int i=0; i<n+1;i++)
    {
@@ -69,7 +69,7 @@ int main()
       //    plt::ylim(0, 1);
       //    //plt::named_plot("GS",xx1, xx2, "g--");
       //    plt::legend();
-      //    plt::pause(0.1);         
+      //    plt::pause(0.1);
       // }
    }
 
