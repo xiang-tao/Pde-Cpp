@@ -1,0 +1,9 @@
+/home/xt/github/Pde-Cpp/.vscode/CMakeFiles/rebuild_cache.dir
+/home/xt/github/Pde-Cpp/.vscode/CMakeFiles/edit_cache.dir
+/home/xt/github/Pde-Cpp/.vscode/test/CMakeFiles/hello.dir
+/home/xt/github/Pde-Cpp/.vscode/test/CMakeFiles/cmp.dir
+/home/xt/github/Pde-Cpp/.vscode/test/CMakeFiles/rebuild_cache.dir
+/home/xt/github/Pde-Cpp/.vscode/test/CMakeFiles/3d_plot.dir
+/home/xt/github/Pde-Cpp/.vscode/test/CMakeFiles/animation.dir
+/home/xt/github/Pde-Cpp/.vscode/test/CMakeFiles/edit_cache.dir
+/home/xt/github/Pde-Cpp/.vscode/test/CMakeFiles/test.dir

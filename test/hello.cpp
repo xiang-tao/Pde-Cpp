@@ -7,5 +7,7 @@ int main()
     double a = 3.0;
     double c = d / a;
     cout << c << endl;
+    Vector A(2.0,3);
+    cout<<A<<endl;
     return 0;
 }

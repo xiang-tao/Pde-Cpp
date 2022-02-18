@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/xt/github/Pde-Cpp/.vscode/test",
+  "command": "/usr/bin/c++   -I/home/xt/github/Pde-Cpp/include  -g   -o CMakeFiles/hello.dir/hello.cpp.o -c /home/xt/github/Pde-Cpp/test/hello.cpp",
+  "file": "/home/xt/github/Pde-Cpp/test/hello.cpp"
+},
+{
+  "directory": "/home/xt/github/Pde-Cpp/.vscode/test",
+  "command": "/usr/bin/c++   -I/home/xt/github/Pde-Cpp/include -I/usr/include/python3.8  -g   -o CMakeFiles/cmp.dir/cmp.cpp.o -c /home/xt/github/Pde-Cpp/test/cmp.cpp",
+  "file": "/home/xt/github/Pde-Cpp/test/cmp.cpp"
+},
+{
+  "directory": "/home/xt/github/Pde-Cpp/.vscode/test",
+  "command": "/usr/bin/c++   -I/home/xt/github/Pde-Cpp/include -I/usr/include/python3.8  -g   -o CMakeFiles/3d_plot.dir/3d_plot.cpp.o -c /home/xt/github/Pde-Cpp/test/3d_plot.cpp",
+  "file": "/home/xt/github/Pde-Cpp/test/3d_plot.cpp"
+},
+{
+  "directory": "/home/xt/github/Pde-Cpp/.vscode/test",
+  "command": "/usr/bin/c++   -I/home/xt/github/Pde-Cpp/include -I/usr/include/python3.8  -g   -o CMakeFiles/animation.dir/animation.cpp.o -c /home/xt/github/Pde-Cpp/test/animation.cpp",
+  "file": "/home/xt/github/Pde-Cpp/test/animation.cpp"
+},
+{
+  "directory": "/home/xt/github/Pde-Cpp/.vscode/test",
+  "command": "/usr/bin/c++   -I/home/xt/github/Pde-Cpp/include -I/usr/include/python3.8  -g   -o CMakeFiles/test.dir/test.cpp.o -c /home/xt/github/Pde-Cpp/test/test.cpp",
+  "file": "/home/xt/github/Pde-Cpp/test/test.cpp"
+}
+]
