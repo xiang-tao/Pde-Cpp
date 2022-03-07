@@ -126,21 +126,6 @@ hello/fast:
 .PHONY : hello/fast
 
 # Convenience name for target.
-test/CMakeFiles/cmp.dir/rule:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/cmp.dir/rule
-.PHONY : test/CMakeFiles/cmp.dir/rule
-
-# Convenience name for target.
-cmp: test/CMakeFiles/cmp.dir/rule
-
-.PHONY : cmp
-
-# fast build rule for target.
-cmp/fast:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/cmp.dir/build.make test/CMakeFiles/cmp.dir/build
-.PHONY : cmp/fast
-
-# Convenience name for target.
 test/CMakeFiles/3d_plot.dir/rule:
 	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/3d_plot.dir/rule
 .PHONY : test/CMakeFiles/3d_plot.dir/rule
@@ -239,33 +224,6 @@ animation.cpp.s:
 	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/animation.dir/build.make test/CMakeFiles/animation.dir/animation.cpp.s
 .PHONY : animation.cpp.s
 
-cmp.o: cmp.cpp.o
-
-.PHONY : cmp.o
-
-# target to build an object file
-cmp.cpp.o:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/cmp.dir/build.make test/CMakeFiles/cmp.dir/cmp.cpp.o
-.PHONY : cmp.cpp.o
-
-cmp.i: cmp.cpp.i
-
-.PHONY : cmp.i
-
-# target to preprocess a source file
-cmp.cpp.i:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/cmp.dir/build.make test/CMakeFiles/cmp.dir/cmp.cpp.i
-.PHONY : cmp.cpp.i
-
-cmp.s: cmp.cpp.s
-
-.PHONY : cmp.s
-
-# target to generate assembly for a file
-cmp.cpp.s:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/cmp.dir/build.make test/CMakeFiles/cmp.dir/cmp.cpp.s
-.PHONY : cmp.cpp.s
-
 hello.o: hello.cpp.o
 
 .PHONY : hello.o
@@ -327,7 +285,6 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... hello"
-	@echo "... cmp"
 	@echo "... rebuild_cache"
 	@echo "... 3d_plot"
 	@echo "... animation"
@@ -339,9 +296,6 @@ help:
 	@echo "... animation.o"
 	@echo "... animation.i"
 	@echo "... animation.s"
-	@echo "... cmp.o"
-	@echo "... cmp.i"
-	@echo "... cmp.s"
 	@echo "... hello.o"
 	@echo "... hello.i"
 	@echo "... hello.s"

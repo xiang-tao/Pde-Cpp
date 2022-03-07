@@ -15,13 +15,13 @@ linalg.h
 ../include/algebra/linalg.h
 
 ../include/algebra/Matrix.h
-cmath
--
 cassert
 -
-iostream
+cmath
 -
 initializer_list
+-
+iostream
 -
 string
 -
@@ -41,8 +41,8 @@ initializer_list
 ../include/algebra/linalg.h
 
 /home/xt/github/Pde-Cpp/test/hello.cpp
-iostream
--
 algebra/Algebra_kernel.h
 /home/xt/github/Pde-Cpp/test/algebra/Algebra_kernel.h
+iostream
+-
 

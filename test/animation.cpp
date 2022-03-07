@@ -9,7 +9,7 @@ int main()
 	int n = 1000;
 	std::vector<double> x, y, z;
 
-	for(int i=0; i<n; i++) {
+    for(int i=0; i<n; i++) {
 		x.push_back(i*i);
 		y.push_back(sin(2*M_PI*i/360.0));
 		z.push_back(log(i));

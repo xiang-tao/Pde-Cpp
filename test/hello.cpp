@@ -1,13 +1,14 @@
-#include <iostream>
 #include "algebra/Algebra_kernel.h"
+#include <iostream>
+
 using namespace std;
+
 int main()
 {
-    double d = 1.0;
-    double a = 3.0;
-    double c = d / a;
-    cout << c << endl;
-    Vector A(2.0,3);
-    cout<<A<<endl;
+    Matrix A(3, 5, 1);
+    Matrix B(A);
+    Matrix C(B.shape[0], B.shape[1]);
+    C = B;
+    cout << C << endl;
     return 0;
 }
