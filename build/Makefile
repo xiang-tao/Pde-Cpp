@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named base_son
+
+# Build rule for target.
+base_son: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 base_son
+.PHONY : base_son
+
+# fast build rule for target.
+base_son/fast:
+	$(MAKE) -f test/CMakeFiles/base_son.dir/build.make test/CMakeFiles/base_son.dir/build
+.PHONY : base_son/fast
+
+#=============================================================================
 # Target rules for targets named hello
 
 # Build rule for target.
@@ -170,6 +183,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... base_son"
 	@echo "... hello"
 	@echo "... 3d_plot"
 	@echo "... animation"

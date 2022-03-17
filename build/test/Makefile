@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+test/CMakeFiles/base_son.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/base_son.dir/rule
+.PHONY : test/CMakeFiles/base_son.dir/rule
+
+# Convenience name for target.
+base_son: test/CMakeFiles/base_son.dir/rule
+
+.PHONY : base_son
+
+# fast build rule for target.
+base_son/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/base_son.dir/build.make test/CMakeFiles/base_son.dir/build
+.PHONY : base_son/fast
+
+# Convenience name for target.
 test/CMakeFiles/hello.dir/rule:
 	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/hello.dir/rule
 .PHONY : test/CMakeFiles/hello.dir/rule
@@ -224,6 +239,33 @@ animation.cpp.s:
 	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/animation.dir/build.make test/CMakeFiles/animation.dir/animation.cpp.s
 .PHONY : animation.cpp.s
 
+base_son.o: base_son.cpp.o
+
+.PHONY : base_son.o
+
+# target to build an object file
+base_son.cpp.o:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/base_son.dir/build.make test/CMakeFiles/base_son.dir/base_son.cpp.o
+.PHONY : base_son.cpp.o
+
+base_son.i: base_son.cpp.i
+
+.PHONY : base_son.i
+
+# target to preprocess a source file
+base_son.cpp.i:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/base_son.dir/build.make test/CMakeFiles/base_son.dir/base_son.cpp.i
+.PHONY : base_son.cpp.i
+
+base_son.s: base_son.cpp.s
+
+.PHONY : base_son.s
+
+# target to generate assembly for a file
+base_son.cpp.s:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/base_son.dir/build.make test/CMakeFiles/base_son.dir/base_son.cpp.s
+.PHONY : base_son.cpp.s
+
 hello.o: hello.cpp.o
 
 .PHONY : hello.o
@@ -284,6 +326,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... base_son"
 	@echo "... hello"
 	@echo "... rebuild_cache"
 	@echo "... 3d_plot"
@@ -296,6 +339,9 @@ help:
 	@echo "... animation.o"
 	@echo "... animation.i"
 	@echo "... animation.s"
+	@echo "... base_son.o"
+	@echo "... base_son.i"
+	@echo "... base_son.s"
 	@echo "... hello.o"
 	@echo "... hello.i"
 	@echo "... hello.s"

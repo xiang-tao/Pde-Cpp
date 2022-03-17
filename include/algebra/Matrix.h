@@ -12,11 +12,13 @@ namespace PDECPP {
 namespace AlgebraObject {
 
     template <typename F = double, typename I = int>
-    struct Matrix {
-        typedef F Float;
-        typedef I Int;
+    class Matrix {
+        // typedef F Float;
+        // typedef I Int;
         F** data;
-        I shape[2];
+
+    public:
+        I shape[2]; //shape[0]:row，shape[1]:columns
 
         // static std::string format;
 
@@ -59,7 +61,7 @@ namespace AlgebraObject {
         }
 
         //拷贝构造函数
-        Matrix(const Matrix& rhs)
+        Matrix(const Matrix<F, I>& rhs)
         {
             this->shape[0] = rhs.shape[0];
             this->shape[1] = rhs.shape[1];
@@ -135,7 +137,47 @@ namespace AlgebraObject {
             }
         }
 
-        ~Matrix()
+        /*
+         *Describe:
+         用于调整矩阵形状
+         nc 行
+         nr 列
+         * */
+        Matrix<F, I> reshape(I nc, I nr)
+        {
+            if (nr == -1) {
+                if (shape[0] * shape[1] % nc == 0) {
+                    nr = shape[0] * shape[1] / nc;
+                    Matrix<F, I> m(nc, nr);
+                    this->fill_reshape(m);
+                    return m;
+                } else {
+                    std::cout << "无法重新组合形状" << std::endl;
+                    assert(0);
+                }
+            } else if (nc == -1) {
+                if (shape[0] * shape[1] % nr == 0) {
+                    nc = shape[0] * shape[1] / nr;
+                    Matrix<F, I> m(nc, nr);
+                    this->fill_reshape(m);
+                    return m;
+                } else {
+                    std::cout << "无法重新组合形状" << std::endl;
+                    assert(0);
+                }
+            } else {
+                if (nc * nr != shape[0] * shape[1]) {
+                    std::cout << "无法重新组合形状" << std::endl;
+                    assert(0);
+                } else {
+                    Matrix<F, I> m(nc, nr);
+                    this->fill_reshape(m);
+                    return m;
+                }
+            }
+        }
+
+        ~Matrix() noexcept
         {
             //std::cout<<"析构函数调用"<<std::endl;
             for (int i = 0; i < shape[0]; i++) {
@@ -170,33 +212,43 @@ namespace AlgebraObject {
             return data[i];
         }
 
-        Matrix<F, I>& transpose()
+        /*
+         *Describe
+         将函数的行列进行交换
+         * */
+        Matrix<F, I> transpose()
         {
             //std::cout<<"转置函数调用"<<std::endl;
             I row = shape[0];
             I col = shape[1];
-            F arr[row][col] = { 0 };
+            Matrix<F, I> arr(col, row);
             for (I i = 0; i < row; i++) {
                 for (I j = 0; j < col; j++)
-                    arr[i][j] = this->data[i][j];
+                    arr[j][i] = this->data[i][j];
             }
+            return arr;
+        }
 
-            if (data != NULL) {
-                delete[] data;
-                data = NULL;
-                shape[0] = 0;
-                shape[1] = 0;
-            }
-            shape[0] = col;
-            shape[1] = row;
-
-            data = new F*[shape[0]];
-            for (I i = 0; i < shape[0]; i++) {
-                data[i] = new F[shape[1]];
-                for (I j = 0; j < shape[1]; j++)
-                    data[i][j] = arr[j][i];
-            }
-            return *this;
+    private:
+        /*
+         *Describe:
+         当外界调用reshape函数时候，使用此函数讲调用对象的值填入到返回的矩阵中
+         * */
+        void fill_reshape(Matrix<F, I>& m2) const
+        {
+            I nc = m2.shape[0];
+            I nr = m2.shape[1];
+            I k1 = 0;
+            I k2 = 0;
+            for (I i = 0; i < nc; i++)
+                for (I j = 0; j < nr; j++) {
+                    m2[i][j] = this->data[k1][k2];
+                    k2++;
+                    if (k2 == this->shape[1]) {
+                        k1++;
+                        k2 = 0;
+                    }
+                }
         }
     };
 

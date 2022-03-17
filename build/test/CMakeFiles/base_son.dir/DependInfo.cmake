@@ -4,14 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/xt/github/Pde-Cpp/test/cmp.cpp" "/home/xt/github/Pde-Cpp/build/test/CMakeFiles/cmp.dir/cmp.cpp.o"
+  "/home/xt/github/Pde-Cpp/test/base_son.cpp" "/home/xt/github/Pde-Cpp/build/test/CMakeFiles/base_son.dir/base_son.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
-  "/usr/include/python3.8"
   )
 
 # Targets to which this target links.

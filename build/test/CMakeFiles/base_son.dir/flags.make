@@ -6,5 +6,5 @@ CXX_FLAGS = -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/xt/github/Pde-Cpp/include -I/usr/include/python3.8 
+CXX_INCLUDES = -I/home/xt/github/Pde-Cpp/include 
 

@@ -27,8 +27,6 @@ string
 -
 
 ../include/algebra/Vector.h
-iostream
--
 algorithm
 -
 cassert
@@ -36,6 +34,8 @@ cassert
 cmath
 -
 initializer_list
+-
+iostream
 -
 
 ../include/algebra/linalg.h

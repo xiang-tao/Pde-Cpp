@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/base_son.dir/base_son.cpp.o  -o base_son 

@@ -40,7 +40,7 @@ iostream
 
 ../include/algebra/linalg.h
 
-/home/xt/github/Pde-Cpp/test/hello.cpp
+/home/xt/github/Pde-Cpp/test/base_son.cpp
 algebra/Algebra_kernel.h
 /home/xt/github/Pde-Cpp/test/algebra/Algebra_kernel.h
 iostream

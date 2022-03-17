@@ -4,56 +4,63 @@
 此文件作用：创建一个数学中的向量，使用c++结构体和模板进行实现
 结构体:重写拷贝构造函数，重载赋值"="函数
 */
-#include <iostream>
 #include <algorithm>
 #include <cassert>
-#include <cmath> 
+#include <cmath>
 #include <initializer_list>
+#include <iostream>
 
 namespace PDECPP {
 namespace AlgebraObject {
 
-template<typename F=double, typename I=int>
-struct Vector 
-{
-    F * data; //管理向量中的数据
-    I size; //控制向量的维度
+    template <typename F = double, typename I = int>
+    class Vector {
+        F* data; //管理向量中的数据
 
-    /*
+        void init(F val = 0.0)
+        {
+            data = new F[size];
+            for (I i = 0; i < size; i++)
+                data[i] = val;
+        }
+
+    public:
+        I size; //控制向量的维度
+
+        /*
      * 默认构造函数
      使用方式：Vector v;默认向量v为空。
      */
-    Vector()
-    {
-        //data = NULL;
-        data = nullptr;
-        size = 0;
-    }
-
-    //有参构造函数，调用形式 Vector v(5,1);向量维度是5，初始化全为1.
-    //若使用Vector v(5);则向量维度为5，初始化默认val = 0;
-    Vector(I s, F val=0.0)
-    {
-        size = s;
-        init(val);
-    }
-
-    //initializer_list目的是为了初始化更加的灵活方便，参见https://blog.csdn.net/fengxinlinux/article/details/72614874
-    //初始化方式：vector v = { 1, 2, 3, 4 };
-    Vector(const std::initializer_list<F> &l)
-    {
-        //std::cout<<"初始化列表调用"<<std::endl;
-        size = l.size();
-        data = new F[size];
-        I i = 0;
-        for(auto & val: l)
+        Vector()
         {
-            data[i] = val;
-            i++;
+            //data = NULL;
+            data = nullptr;
+            size = 0;
         }
-    }
 
-    /*
+        //有参构造函数，调用形式 Vector v(5,1);向量维度是5，初始化全为1.
+        //若使用Vector v(5);则向量维度为5，初始化默认val = 0;
+        Vector(I s, F val = 0.0)
+        {
+            size = s;
+            init(val);
+        }
+
+        //initializer_list目的是为了初始化更加的灵活方便，参见https://blog.csdn.net/fengxinlinux/article/details/72614874
+        //初始化方式：vector v = { 1, 2, 3, 4 };
+        Vector(const std::initializer_list<F>& l)
+        {
+            //std::cout<<"初始化列表调用"<<std::endl;
+            size = l.size();
+            data = new F[size];
+            I i = 0;
+            for (auto& val : l) {
+                data[i] = val;
+                i++;
+            }
+        }
+
+        /*
     此处重载 = 的原因是防止调用赋值符号时候由于类自身的浅拷贝是将地址一并拷贝，
     所以析构函数会释放同一个内存多次，有了这个重载，不同对象拷贝时候属性的地址就不一样了，
     因此不会释放同一个内存多次。
@@ -62,157 +69,139 @@ struct Vector
     Vector v;
     v = v1;此处才会调用重载的“=”函数
     */
-    Vector<F,I>& operator = (const Vector<F, I> & rhs)
-    {	 
-        //此处由于判断了维度是否一致问题，因此后续的过程是维度是
-        //一致的，可以不用再次判断是否为空指针再用new新建内存，
-        //这里没有必要这样做，但是在其他场合例如当维度不一致都可
-        //以进行赋值时候就有必要判断是否为nullptr，再使用new。   
-        if(this->size != rhs.size)
-	    {
-	    	std::cout<<"维度不一致，不能赋值"<<std::endl;
-	    	assert(0); //终止程序
-	    }
-        else
+        Vector<F, I>& operator=(const Vector<F, I>& rhs)
         {
-            if(this != & rhs)
-            {
-                //copy_n来自于STL中的算法头文件algorithm
-                std::copy_n(rhs.data, size, data);
+            //此处由于判断了维度是否一致问题，因此后续的过程是维度是
+            //一致的，可以不用再次判断是否为空指针再用new新建内存，
+            //这里没有必要这样做，但是在其他场合例如当维度不一致都可
+            //以进行赋值时候就有必要判断是否为nullptr，再使用new。
+            if (this->size != rhs.size) {
+                std::cout << "维度不一致，不能赋值" << std::endl;
+                assert(0); //终止程序
+            } else {
+                if (this != &rhs) {
+                    //copy_n来自于STL中的算法头文件algorithm
+                    std::copy_n(rhs.data, size, data);
+                }
+                return *this;
             }
-            return *this;
-        }       
-    }
+        }
 
-    //同时我们还要重写拷贝构造函数，防止当用户使用p(a)，即p=a，但是此处不会调用上面的重载“=”
-    //函数，而是调用系统的拷贝构造函数，系统的浅拷贝对于指针会带来内存泄露问题，
-    //因此要自己重新写。使用方式Vector v = v1; or Vector v(v1);    
-    Vector(const Vector &v)
+        //同时我们还要重写拷贝构造函数，防止当用户使用p(a)，即p=a，但是此处不会调用上面的重载“=”
+        //函数，而是调用系统的拷贝构造函数，系统的浅拷贝对于指针会带来内存泄露问题，
+        //因此要自己重新写。使用方式Vector v = v1; or Vector v(v1);
+        Vector(const Vector& v)
+        {
+            //std::cout<<"拷贝构造调用"<<std::endl;
+            this->size = v.size;
+            this->data = new F[this->size];
+            std::copy_n(v.data, v.size, this->data);
+            // for(int i=0;i<this->size;i++)
+            // {
+            //      this->data[i] = v.data[i];
+            // }
+        }
+
+        //析构函数，释放内存空间
+        ~Vector()
+        {
+            if (data != nullptr)
+                delete[] data;
+        }
+
+        F norm() const
+        {
+            F sum = 0.0;
+            for (I i = 0; i < size; i++)
+                sum += data[i] * data[i];
+            return std::sqrt(sum);
+        }
+
+        F& operator[](const I i)
+        {
+            return data[i];
+        }
+
+        const F& operator[](const I i) const
+        {
+            return data[i];
+        }
+    };
+
+    //下面是一些重载运算符的函数，之所以返回的不是引用，原因是返回的变量是一个函数
+    //临时变量，返回引用不能够返回临时变量。
+    //重载向量减法
+    template <typename F, typename I>
+    inline Vector<F, I> operator-(const Vector<F, I>& v0,
+        const Vector<F, I>& v1)
     {
-        //std::cout<<"拷贝构造调用"<<std::endl;
-    	this->size = v.size;
-    	this->data = new F[this->size];
-        std::copy_n(v.data, v.size, this->data);
-    	// for(int i=0;i<this->size;i++)
-    	// {
-    	//      this->data[i] = v.data[i];
-    	// }
+        Vector<F, I> r(v0.size);
+        for (auto i = 0; i < v0.size; i++) {
+            r[i] = v0[i] - v1[i];
+        }
+        return r;
     }
-    
-    void init(F val=0.0)
+
+    //重载向量加法
+    template <typename F, typename I>
+    inline Vector<F, I> operator+(const Vector<F, I>& v0,
+        const Vector<F, I>& v1)
     {
-        data = new F[size];
-        for(I i=0; i < size; i++)
-            data[i] = val;
+        Vector<F, I> r(v0.size);
+        for (auto i = 0; i < v0.size; i++) {
+            r[i] = v0[i] + v1[i];
+        }
+        return r;
     }
 
-    //析构函数，释放内存空间
-    ~Vector()
+    //重载向量乘法，即数学中的点乘，对应相乘相加
+    template <typename F, typename I>
+    inline double operator*(const Vector<F, I>& v0,
+        const Vector<F, I>& v1)
     {
-        if(data != nullptr)
-            delete [] data;
+        double r = 0;
+        for (auto i = 0; i < v0.size; i++) {
+            r += v0[i] * v1[i];
+        }
+        return r;
     }
 
-    F norm() const
+    //重载数字与向量乘法，数字在左边
+    template <typename F, typename I>
+    inline Vector<F, I> operator*(const double& v0,
+        const Vector<F, I>& v1)
     {
-        F sum = 0.0;
-        for(I i=0; i < size; i++)
-            sum += data[i]*data[i];
-        return std::sqrt(sum);
+        Vector<F, I> r(v1.size);
+        for (auto i = 0; i < v1.size; i++) {
+            r[i] = v0 * v1[i];
+        }
+        return r;
     }
 
-    F & operator[](const I i) 
+    //重载数字与向量乘法，数字在右边
+    template <typename F, typename I>
+    inline Vector<F, I> operator*(const Vector<F, I>& v1,
+        const double& v0)
     {
-        return data[i];
+        Vector<F, I> r(v1.size);
+        for (auto i = 0; i < v1.size; i++) {
+            r[i] = v0 * v1[i];
+        }
+        return r;
     }
 
-    const F & operator[](const I i) const
+    //重载左移运算符，实现向量输出自由
+    template <typename F, typename I>
+    std::ostream& operator<<(std::ostream& os, const Vector<F, I>& v)
     {
-        return data[i];
+        std::cout << "Vector(" << v.size << ")" << std::endl;
+
+        for (I i = 0; i < v.size; i++) {
+            os << v[i] << " ";
+        }
+        os << std::endl;
+        return os;
     }
-
-};
-
-//下面是一些重载运算符的函数，之所以返回的不是引用，原因是返回的变量是一个函数
-//临时变量，返回引用不能够返回临时变量。
-//重载向量减法
-template<typename F, typename I>
-inline Vector<F, I> operator - (const Vector<F, I> & v0, 
-        const Vector<F, I> & v1)
-{
-    Vector<F, I> r(v0.size);
-    for(auto i=0; i < v0.size; i++)
-    {
-        r[i] = v0[i] - v1[i];
-    }
-    return r;
-}
-
-//重载向量加法
-template<typename F, typename I>
-inline Vector<F, I> operator + (const Vector<F, I> & v0, 
-        const Vector<F, I> & v1)
-{
-    Vector<F, I> r(v0.size);
-    for(auto i=0; i < v0.size; i++)
-    {
-        r[i] = v0[i] + v1[i];
-    }
-    return r;
-}
-
-//重载向量乘法，即数学中的点乘，对应相乘相加
-template<typename F, typename I>
-inline double operator * (const Vector<F, I> & v0, 
-        const Vector<F, I> & v1)
-{
-    double r=0;
-    for(auto i=0; i < v0.size; i++)
-    {
-        r += v0[i]*v1[i];
-    }
-    return r;
-}
-
-//重载数字与向量乘法，数字在左边
-template<typename F, typename I>
-inline Vector<F, I> operator * (const double & v0, 
-        const Vector<F, I> & v1)
-{
-    Vector<F, I> r(v1.size);
-    for(auto i=0; i < v1.size; i++)
-    {
-        r[i] = v0*v1[i];
-    }
-    return r;
-}
-
-//重载数字与向量乘法，数字在右边
-template<typename F, typename I>
-inline Vector<F, I> operator * ( const Vector<F, I> & v1,
-                            const double & v0)
-{
-    Vector<F, I> r(v1.size);
-    for(auto i=0; i < v1.size; i++)
-    {
-        r[i] = v0*v1[i];
-    }
-    return r;
-}
-
-//重载左移运算符，实现向量输出自由
-template<typename F, typename I>
-std::ostream& operator << (std::ostream & os, const Vector<F, I> & v)
-{
-    std::cout << "Vector("<< v.size <<")" << std::endl;
-
-    for(I i = 0; i < v.size; i++)
-    {
-        os << v[i] << " ";
-    }
-    os << std::endl;
-    return os;
-}
 
 } // end of namespace AlgebraObject
 
