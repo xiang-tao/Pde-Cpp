@@ -40,7 +40,8 @@ namespace AlgebraObject {
 
         //有参构造函数，调用形式 Vector v(5,1);向量维度是5，初始化全为1.
         //若使用Vector v(5);则向量维度为5，初始化默认val = 0;
-        Vector(I s, F val = 0.0)
+        //explicit作用是防止隐式转换，因为v=5似乎不符合一般看到向量的常识。见cppPlus p336页下面
+        explicit Vector(I s, F val = 0.0)
         {
             size = s;
             init(val);
@@ -105,8 +106,10 @@ namespace AlgebraObject {
         //析构函数，释放内存空间
         ~Vector()
         {
-            if (data != nullptr)
+            if (data != nullptr) {
                 delete[] data;
+                data = nullptr;
+            }
         }
 
         F norm() const
@@ -119,11 +122,22 @@ namespace AlgebraObject {
 
         F& operator[](const I i)
         {
+            //这里可能会存在较大的开销，故关闭最好，使用时候小心越界即可
+            // if (i >= size || i < 0) {
+            //     std::cout << "array out of bounds" << std::endl;
+            //     assert(0);
+            // }
             return data[i];
         }
 
+        //这里之所以重载了两个[],这里加了const目的见cppPlus p359页下面介绍
         const F& operator[](const I i) const
         {
+            //这里可能会存在较大的开销，故关闭最好，使用时候小心越界即可
+            // if (i >= size || i < 0) {
+            //     std::cout << "array out of bounds" << std::endl;
+            //     assert(0);
+            // }
             return data[i];
         }
     };

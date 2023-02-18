@@ -124,6 +124,19 @@ base_son/fast:
 .PHONY : base_son/fast
 
 #=============================================================================
+# Target rules for targets named cmp
+
+# Build rule for target.
+cmp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cmp
+.PHONY : cmp
+
+# fast build rule for target.
+cmp/fast:
+	$(MAKE) -f test/CMakeFiles/cmp.dir/build.make test/CMakeFiles/cmp.dir/build
+.PHONY : cmp/fast
+
+#=============================================================================
 # Target rules for targets named hello
 
 # Build rule for target.
@@ -184,6 +197,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... base_son"
+	@echo "... cmp"
 	@echo "... hello"
 	@echo "... 3d_plot"
 	@echo "... animation"

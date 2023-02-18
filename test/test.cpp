@@ -7,6 +7,8 @@ namespace plt = matplotlibcpp;
 
 int main()
 {
+
+
    int n = 100;
    double m;
    double h = 2.0/n;

@@ -287,6 +287,21 @@ namespace AlgebraObject {
         return c;
     }
 
+    //实现-A，即矩阵的相反数
+    template <typename F, typename I>
+    inline Matrix<F, I> operator-(const Matrix<F, I>& m0)
+    {
+        auto nr = m0.shape[0];
+        auto nc = m0.shape[1];
+
+        Matrix<F, I> c(nr, nc);
+        for (auto i = 0; i < nr; i++) {
+            for (auto j = 0; j < nc; j++) {
+                c[i][j] = -m0[i][j];
+            }
+        }
+        return c;
+    }
     //重载矩阵的加法
     template <typename F, typename I>
     inline Matrix<F, I> operator+(const Matrix<F, I>& m0,
@@ -309,16 +324,17 @@ namespace AlgebraObject {
     inline Matrix<F, I> operator*(const double& m0,
         const Matrix<F, I>& m1)
     {
-        auto nr = m1.shape[0];
-        auto nc = m1.shape[1];
-
-        Matrix<F, I> c(nr, nc);
-        for (auto i = 0; i < nr; i++) {
-            for (auto j = 0; j < nc; j++) {
-                c[i][j] = m0 * m1[i][j];
-            }
-        }
-        return c;
+        // auto nr = m1.shape[0];
+        // auto nc = m1.shape[1];
+        //
+        // Matrix<F, I> c(nr, nc);
+        // for (auto i = 0; i < nr; i++) {
+        //     for (auto j = 0; j < nc; j++) {
+        //         c[i][j] = m0 * m1[i][j];
+        //     }
+        // }
+        // return c;
+        return m1 * m0;
     }
 
     //重载矩阵的数乘，数在右边

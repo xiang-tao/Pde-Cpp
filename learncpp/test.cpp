@@ -1,9 +1,9 @@
-#include <NumCpp.hpp>
 #include <iostream>
 using namespace std;
 int main()
 {
-    nc::NdArray<int> v1 = { 1, 2, 3 };
-
+    double a = 3.32;
+    int b = static_cast<int>(a);
+    cout << b << endl;
     return 0;
 }
