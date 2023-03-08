@@ -73,7 +73,8 @@ clean: test/clean
 # Recursive "all" directory target.
 test/all: test/CMakeFiles/base_son.dir/all
 test/all: test/CMakeFiles/cmp.dir/all
-test/all: test/CMakeFiles/hello.dir/all
+test/all: test/CMakeFiles/Cholesky.dir/all
+test/all: test/CMakeFiles/LU.dir/all
 test/all: test/CMakeFiles/3d_plot.dir/all
 test/all: test/CMakeFiles/animation.dir/all
 test/all: test/CMakeFiles/test.dir/all
@@ -88,7 +89,8 @@ test/preinstall:
 # Recursive "clean" directory target.
 test/clean: test/CMakeFiles/base_son.dir/clean
 test/clean: test/CMakeFiles/cmp.dir/clean
-test/clean: test/CMakeFiles/hello.dir/clean
+test/clean: test/CMakeFiles/Cholesky.dir/clean
+test/clean: test/CMakeFiles/LU.dir/clean
 test/clean: test/CMakeFiles/3d_plot.dir/clean
 test/clean: test/CMakeFiles/animation.dir/clean
 test/clean: test/CMakeFiles/test.dir/clean
@@ -102,7 +104,7 @@ test/clean: test/CMakeFiles/test.dir/clean
 test/CMakeFiles/base_son.dir/all:
 	$(MAKE) -f test/CMakeFiles/base_son.dir/build.make test/CMakeFiles/base_son.dir/depend
 	$(MAKE) -f test/CMakeFiles/base_son.dir/build.make test/CMakeFiles/base_son.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xt/github/Pde-Cpp/build/CMakeFiles --progress-num=5,6 "Built target base_son"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xt/github/Pde-Cpp/build/CMakeFiles --progress-num=9,10 "Built target base_son"
 .PHONY : test/CMakeFiles/base_son.dir/all
 
 # Build rule for subdir invocation for target.
@@ -129,7 +131,7 @@ test/CMakeFiles/base_son.dir/clean:
 test/CMakeFiles/cmp.dir/all:
 	$(MAKE) -f test/CMakeFiles/cmp.dir/build.make test/CMakeFiles/cmp.dir/depend
 	$(MAKE) -f test/CMakeFiles/cmp.dir/build.make test/CMakeFiles/cmp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xt/github/Pde-Cpp/build/CMakeFiles --progress-num=7,8 "Built target cmp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xt/github/Pde-Cpp/build/CMakeFiles --progress-num=11,12 "Built target cmp"
 .PHONY : test/CMakeFiles/cmp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -150,31 +152,58 @@ test/CMakeFiles/cmp.dir/clean:
 .PHONY : test/CMakeFiles/cmp.dir/clean
 
 #=============================================================================
-# Target rules for target test/CMakeFiles/hello.dir
+# Target rules for target test/CMakeFiles/Cholesky.dir
 
 # All Build rule for target.
-test/CMakeFiles/hello.dir/all:
-	$(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/depend
-	$(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xt/github/Pde-Cpp/build/CMakeFiles --progress-num=9,10 "Built target hello"
-.PHONY : test/CMakeFiles/hello.dir/all
+test/CMakeFiles/Cholesky.dir/all:
+	$(MAKE) -f test/CMakeFiles/Cholesky.dir/build.make test/CMakeFiles/Cholesky.dir/depend
+	$(MAKE) -f test/CMakeFiles/Cholesky.dir/build.make test/CMakeFiles/Cholesky.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xt/github/Pde-Cpp/build/CMakeFiles --progress-num=3,4 "Built target Cholesky"
+.PHONY : test/CMakeFiles/Cholesky.dir/all
 
 # Build rule for subdir invocation for target.
-test/CMakeFiles/hello.dir/rule: cmake_check_build_system
+test/CMakeFiles/Cholesky.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xt/github/Pde-Cpp/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/hello.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/Cholesky.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xt/github/Pde-Cpp/build/CMakeFiles 0
-.PHONY : test/CMakeFiles/hello.dir/rule
+.PHONY : test/CMakeFiles/Cholesky.dir/rule
 
 # Convenience name for target.
-hello: test/CMakeFiles/hello.dir/rule
+Cholesky: test/CMakeFiles/Cholesky.dir/rule
 
-.PHONY : hello
+.PHONY : Cholesky
 
 # clean rule for target.
-test/CMakeFiles/hello.dir/clean:
-	$(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/clean
-.PHONY : test/CMakeFiles/hello.dir/clean
+test/CMakeFiles/Cholesky.dir/clean:
+	$(MAKE) -f test/CMakeFiles/Cholesky.dir/build.make test/CMakeFiles/Cholesky.dir/clean
+.PHONY : test/CMakeFiles/Cholesky.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/LU.dir
+
+# All Build rule for target.
+test/CMakeFiles/LU.dir/all:
+	$(MAKE) -f test/CMakeFiles/LU.dir/build.make test/CMakeFiles/LU.dir/depend
+	$(MAKE) -f test/CMakeFiles/LU.dir/build.make test/CMakeFiles/LU.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xt/github/Pde-Cpp/build/CMakeFiles --progress-num=5,6 "Built target LU"
+.PHONY : test/CMakeFiles/LU.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/LU.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xt/github/Pde-Cpp/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/LU.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xt/github/Pde-Cpp/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/LU.dir/rule
+
+# Convenience name for target.
+LU: test/CMakeFiles/LU.dir/rule
+
+.PHONY : LU
+
+# clean rule for target.
+test/CMakeFiles/LU.dir/clean:
+	$(MAKE) -f test/CMakeFiles/LU.dir/build.make test/CMakeFiles/LU.dir/clean
+.PHONY : test/CMakeFiles/LU.dir/clean
 
 #=============================================================================
 # Target rules for target test/CMakeFiles/3d_plot.dir
@@ -210,7 +239,7 @@ test/CMakeFiles/3d_plot.dir/clean:
 test/CMakeFiles/animation.dir/all:
 	$(MAKE) -f test/CMakeFiles/animation.dir/build.make test/CMakeFiles/animation.dir/depend
 	$(MAKE) -f test/CMakeFiles/animation.dir/build.make test/CMakeFiles/animation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xt/github/Pde-Cpp/build/CMakeFiles --progress-num=3,4 "Built target animation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xt/github/Pde-Cpp/build/CMakeFiles --progress-num=7,8 "Built target animation"
 .PHONY : test/CMakeFiles/animation.dir/all
 
 # Build rule for subdir invocation for target.
@@ -237,7 +266,7 @@ test/CMakeFiles/animation.dir/clean:
 test/CMakeFiles/test.dir/all:
 	$(MAKE) -f test/CMakeFiles/test.dir/build.make test/CMakeFiles/test.dir/depend
 	$(MAKE) -f test/CMakeFiles/test.dir/build.make test/CMakeFiles/test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xt/github/Pde-Cpp/build/CMakeFiles --progress-num=11,12 "Built target test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xt/github/Pde-Cpp/build/CMakeFiles --progress-num=13,14 "Built target test"
 .PHONY : test/CMakeFiles/test.dir/all
 
 # Build rule for subdir invocation for target.

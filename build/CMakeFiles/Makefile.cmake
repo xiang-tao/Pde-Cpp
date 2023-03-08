@@ -54,7 +54,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "test/CMakeFiles/base_son.dir/DependInfo.cmake"
   "test/CMakeFiles/cmp.dir/DependInfo.cmake"
-  "test/CMakeFiles/hello.dir/DependInfo.cmake"
+  "test/CMakeFiles/Cholesky.dir/DependInfo.cmake"
+  "test/CMakeFiles/LU.dir/DependInfo.cmake"
   "test/CMakeFiles/3d_plot.dir/DependInfo.cmake"
   "test/CMakeFiles/animation.dir/DependInfo.cmake"
   "test/CMakeFiles/test.dir/DependInfo.cmake"

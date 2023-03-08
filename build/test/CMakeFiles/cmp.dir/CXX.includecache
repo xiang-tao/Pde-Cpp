@@ -39,6 +39,8 @@ iostream
 -
 
 ../include/algebra/linalg.h
+math.h
+-
 
 /home/xt/github/Pde-Cpp/test/cmp.cpp
 algebra/Algebra_kernel.h

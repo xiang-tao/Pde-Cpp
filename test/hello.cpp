@@ -1,20 +1,9 @@
-#include "algebra/Algebra_kernel.h"
 #include <iostream>
+#include <math.h>
 using namespace std;
-
-template <typename T>
-void mv(T& v)
-{
-    if (typeid(v) == typeid(Vector))
-        cout << "vector" << endl;
-    else
-        cout << "matrix" << endl;
-}
-
 int main()
 {
-    Vector v(4);
-    Matrix m(4, 4, 1);
-    mv(v);
+    int a = 2;
+    cout << sqrt(a) << endl;
     return 0;
 }

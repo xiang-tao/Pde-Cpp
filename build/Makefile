@@ -137,17 +137,30 @@ cmp/fast:
 .PHONY : cmp/fast
 
 #=============================================================================
-# Target rules for targets named hello
+# Target rules for targets named Cholesky
 
 # Build rule for target.
-hello: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 hello
-.PHONY : hello
+Cholesky: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Cholesky
+.PHONY : Cholesky
 
 # fast build rule for target.
-hello/fast:
-	$(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/build
-.PHONY : hello/fast
+Cholesky/fast:
+	$(MAKE) -f test/CMakeFiles/Cholesky.dir/build.make test/CMakeFiles/Cholesky.dir/build
+.PHONY : Cholesky/fast
+
+#=============================================================================
+# Target rules for targets named LU
+
+# Build rule for target.
+LU: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LU
+.PHONY : LU
+
+# fast build rule for target.
+LU/fast:
+	$(MAKE) -f test/CMakeFiles/LU.dir/build.make test/CMakeFiles/LU.dir/build
+.PHONY : LU/fast
 
 #=============================================================================
 # Target rules for targets named 3d_plot
@@ -198,7 +211,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... base_son"
 	@echo "... cmp"
-	@echo "... hello"
+	@echo "... Cholesky"
+	@echo "... LU"
 	@echo "... 3d_plot"
 	@echo "... animation"
 	@echo "... test"

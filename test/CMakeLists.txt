@@ -10,6 +10,7 @@ add_executable(3d_plot 3d_plot.cpp)
 target_include_directories(3d_plot PRIVATE ${PYTHON_INCLUDE_DIRS})
 target_link_libraries(3d_plot ${PYTHON_LIBRARIES})
 
-add_executable(hello hello.cpp)
+add_executable(LU LU.cpp)
+add_executable(Cholesky Cholesky.cpp)
 add_executable(base_son base_son.cpp)
 add_executable(cmp cmp.cpp)

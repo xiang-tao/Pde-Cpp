@@ -39,6 +39,8 @@ iostream
 -
 
 ../include/algebra/linalg.h
+math.h
+-
 
 ../include/thirdparty/matplotlibcpp.h
 Python.h

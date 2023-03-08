@@ -141,19 +141,34 @@ cmp/fast:
 .PHONY : cmp/fast
 
 # Convenience name for target.
-test/CMakeFiles/hello.dir/rule:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/hello.dir/rule
-.PHONY : test/CMakeFiles/hello.dir/rule
+test/CMakeFiles/Cholesky.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/Cholesky.dir/rule
+.PHONY : test/CMakeFiles/Cholesky.dir/rule
 
 # Convenience name for target.
-hello: test/CMakeFiles/hello.dir/rule
+Cholesky: test/CMakeFiles/Cholesky.dir/rule
 
-.PHONY : hello
+.PHONY : Cholesky
 
 # fast build rule for target.
-hello/fast:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/build
-.PHONY : hello/fast
+Cholesky/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/Cholesky.dir/build.make test/CMakeFiles/Cholesky.dir/build
+.PHONY : Cholesky/fast
+
+# Convenience name for target.
+test/CMakeFiles/LU.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/LU.dir/rule
+.PHONY : test/CMakeFiles/LU.dir/rule
+
+# Convenience name for target.
+LU: test/CMakeFiles/LU.dir/rule
+
+.PHONY : LU
+
+# fast build rule for target.
+LU/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/LU.dir/build.make test/CMakeFiles/LU.dir/build
+.PHONY : LU/fast
 
 # Convenience name for target.
 test/CMakeFiles/3d_plot.dir/rule:
@@ -226,6 +241,60 @@ test/fast:
 3d_plot.cpp.s:
 	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/3d_plot.dir/build.make test/CMakeFiles/3d_plot.dir/3d_plot.cpp.s
 .PHONY : 3d_plot.cpp.s
+
+Cholesky.o: Cholesky.cpp.o
+
+.PHONY : Cholesky.o
+
+# target to build an object file
+Cholesky.cpp.o:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/Cholesky.dir/build.make test/CMakeFiles/Cholesky.dir/Cholesky.cpp.o
+.PHONY : Cholesky.cpp.o
+
+Cholesky.i: Cholesky.cpp.i
+
+.PHONY : Cholesky.i
+
+# target to preprocess a source file
+Cholesky.cpp.i:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/Cholesky.dir/build.make test/CMakeFiles/Cholesky.dir/Cholesky.cpp.i
+.PHONY : Cholesky.cpp.i
+
+Cholesky.s: Cholesky.cpp.s
+
+.PHONY : Cholesky.s
+
+# target to generate assembly for a file
+Cholesky.cpp.s:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/Cholesky.dir/build.make test/CMakeFiles/Cholesky.dir/Cholesky.cpp.s
+.PHONY : Cholesky.cpp.s
+
+LU.o: LU.cpp.o
+
+.PHONY : LU.o
+
+# target to build an object file
+LU.cpp.o:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/LU.dir/build.make test/CMakeFiles/LU.dir/LU.cpp.o
+.PHONY : LU.cpp.o
+
+LU.i: LU.cpp.i
+
+.PHONY : LU.i
+
+# target to preprocess a source file
+LU.cpp.i:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/LU.dir/build.make test/CMakeFiles/LU.dir/LU.cpp.i
+.PHONY : LU.cpp.i
+
+LU.s: LU.cpp.s
+
+.PHONY : LU.s
+
+# target to generate assembly for a file
+LU.cpp.s:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/LU.dir/build.make test/CMakeFiles/LU.dir/LU.cpp.s
+.PHONY : LU.cpp.s
 
 animation.o: animation.cpp.o
 
@@ -308,33 +377,6 @@ cmp.cpp.s:
 	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/cmp.dir/build.make test/CMakeFiles/cmp.dir/cmp.cpp.s
 .PHONY : cmp.cpp.s
 
-hello.o: hello.cpp.o
-
-.PHONY : hello.o
-
-# target to build an object file
-hello.cpp.o:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/hello.cpp.o
-.PHONY : hello.cpp.o
-
-hello.i: hello.cpp.i
-
-.PHONY : hello.i
-
-# target to preprocess a source file
-hello.cpp.i:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/hello.cpp.i
-.PHONY : hello.cpp.i
-
-hello.s: hello.cpp.s
-
-.PHONY : hello.s
-
-# target to generate assembly for a file
-hello.cpp.s:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/hello.cpp.s
-.PHONY : hello.cpp.s
-
 test.o: test.cpp.o
 
 .PHONY : test.o
@@ -370,7 +412,8 @@ help:
 	@echo "... depend"
 	@echo "... base_son"
 	@echo "... cmp"
-	@echo "... hello"
+	@echo "... Cholesky"
+	@echo "... LU"
 	@echo "... rebuild_cache"
 	@echo "... 3d_plot"
 	@echo "... animation"
@@ -379,6 +422,12 @@ help:
 	@echo "... 3d_plot.o"
 	@echo "... 3d_plot.i"
 	@echo "... 3d_plot.s"
+	@echo "... Cholesky.o"
+	@echo "... Cholesky.i"
+	@echo "... Cholesky.s"
+	@echo "... LU.o"
+	@echo "... LU.i"
+	@echo "... LU.s"
 	@echo "... animation.o"
 	@echo "... animation.i"
 	@echo "... animation.s"
@@ -388,9 +437,6 @@ help:
 	@echo "... cmp.o"
 	@echo "... cmp.i"
 	@echo "... cmp.s"
-	@echo "... hello.o"
-	@echo "... hello.i"
-	@echo "... hello.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
