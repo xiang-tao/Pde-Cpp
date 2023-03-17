@@ -252,6 +252,43 @@ namespace AlgebraObject {
         }
     };
 
+    template <typename F, typename I>
+    int operator==(const Matrix<F, I>& m0,
+        const Matrix<F, I>& m1)
+    {
+        int as = 1;
+        if (&m0 != &m1) {
+            int n1 = m0.shape[0];
+            int n2 = m0.shape[1];
+            int n3 = m1.shape[0];
+            int n4 = m1.shape[1];
+            if (n1 != n3 || n2 != n4) {
+                std::cout << "维度不一致，无法比较相等" << std::endl;
+                assert(0);
+            } else {
+                for (int i = 0; i < n1; i++) {
+                    for (int j = 0; j < n2; j++) {
+                        if (m0[i][j] != m1[i][j]) {
+                            as = 0;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        return as;
+    }
+
+    template <typename F, typename I>
+    int operator!=(const Matrix<F, I>& m0,
+        const Matrix<F, I>& m1)
+    {
+        int as = 1;
+        if (m0 == m1) {
+            as = 0;
+        }
+        return as;
+    }
     //重载矩阵的乘法
     template <typename F, typename I>
     inline Matrix<F, I> operator*(const Matrix<F, I>& m0,

@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+test/CMakeFiles/qrmsg.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/qrmsg.dir/rule
+.PHONY : test/CMakeFiles/qrmsg.dir/rule
+
+# Convenience name for target.
+qrmsg: test/CMakeFiles/qrmsg.dir/rule
+
+.PHONY : qrmsg
+
+# fast build rule for target.
+qrmsg/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/qrmsg.dir/build.make test/CMakeFiles/qrmsg.dir/build
+.PHONY : qrmsg/fast
+
+# Convenience name for target.
 test/CMakeFiles/base_son.dir/rule:
 	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/base_son.dir/rule
 .PHONY : test/CMakeFiles/base_son.dir/rule
@@ -124,6 +139,21 @@ base_son: test/CMakeFiles/base_son.dir/rule
 base_son/fast:
 	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/base_son.dir/build.make test/CMakeFiles/base_son.dir/build
 .PHONY : base_son/fast
+
+# Convenience name for target.
+test/CMakeFiles/hello.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/hello.dir/rule
+.PHONY : test/CMakeFiles/hello.dir/rule
+
+# Convenience name for target.
+hello: test/CMakeFiles/hello.dir/rule
+
+.PHONY : hello
+
+# fast build rule for target.
+hello/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/build
+.PHONY : hello/fast
 
 # Convenience name for target.
 test/CMakeFiles/cmp.dir/rule:
@@ -377,6 +407,60 @@ cmp.cpp.s:
 	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/cmp.dir/build.make test/CMakeFiles/cmp.dir/cmp.cpp.s
 .PHONY : cmp.cpp.s
 
+hello.o: hello.cpp.o
+
+.PHONY : hello.o
+
+# target to build an object file
+hello.cpp.o:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/hello.cpp.o
+.PHONY : hello.cpp.o
+
+hello.i: hello.cpp.i
+
+.PHONY : hello.i
+
+# target to preprocess a source file
+hello.cpp.i:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/hello.cpp.i
+.PHONY : hello.cpp.i
+
+hello.s: hello.cpp.s
+
+.PHONY : hello.s
+
+# target to generate assembly for a file
+hello.cpp.s:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/hello.cpp.s
+.PHONY : hello.cpp.s
+
+qrmsg.o: qrmsg.cpp.o
+
+.PHONY : qrmsg.o
+
+# target to build an object file
+qrmsg.cpp.o:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/qrmsg.dir/build.make test/CMakeFiles/qrmsg.dir/qrmsg.cpp.o
+.PHONY : qrmsg.cpp.o
+
+qrmsg.i: qrmsg.cpp.i
+
+.PHONY : qrmsg.i
+
+# target to preprocess a source file
+qrmsg.cpp.i:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/qrmsg.dir/build.make test/CMakeFiles/qrmsg.dir/qrmsg.cpp.i
+.PHONY : qrmsg.cpp.i
+
+qrmsg.s: qrmsg.cpp.s
+
+.PHONY : qrmsg.s
+
+# target to generate assembly for a file
+qrmsg.cpp.s:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/qrmsg.dir/build.make test/CMakeFiles/qrmsg.dir/qrmsg.cpp.s
+.PHONY : qrmsg.cpp.s
+
 test.o: test.cpp.o
 
 .PHONY : test.o
@@ -410,7 +494,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... qrmsg"
 	@echo "... base_son"
+	@echo "... hello"
 	@echo "... cmp"
 	@echo "... Cholesky"
 	@echo "... LU"
@@ -437,6 +523,12 @@ help:
 	@echo "... cmp.o"
 	@echo "... cmp.i"
 	@echo "... cmp.s"
+	@echo "... hello.o"
+	@echo "... hello.i"
+	@echo "... hello.s"
+	@echo "... qrmsg.o"
+	@echo "... qrmsg.i"
+	@echo "... qrmsg.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

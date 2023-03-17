@@ -39,6 +39,8 @@ iostream
 -
 
 ../include/algebra/linalg.h
+iostream
+-
 math.h
 -
 

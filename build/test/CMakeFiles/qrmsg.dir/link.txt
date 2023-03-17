@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/qrmsg.dir/qrmsg.cpp.o  -o qrmsg 

@@ -44,9 +44,9 @@ iostream
 math.h
 -
 
-/home/xt/github/Pde-Cpp/test/base_son.cpp
+/home/xt/github/Pde-Cpp/test/qrmsg.cpp
 algebra/Algebra_kernel.h
-/home/xt/github/Pde-Cpp/test/algebra/Algebra_kernel.h
+-
 iostream
 -
 

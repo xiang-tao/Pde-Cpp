@@ -144,6 +144,40 @@ namespace AlgebraObject {
 
     //下面是一些重载运算符的函数，之所以返回的不是引用，原因是返回的变量是一个函数
     //临时变量，返回引用不能够返回临时变量。
+    //重载==与!=
+    template <typename F, typename I>
+    int operator==(const Vector<F, I>& v0,
+        const Vector<F, I>& v1)
+    {
+        int as = 1;
+        if (&v0 != &v1) {
+            int n1 = v0.size;
+            int n2 = v1.size;
+            if (n1 != n2) {
+                std::cout << "维度不一致，无法比较相等" << std::endl;
+                assert(0);
+            } else {
+                for (int i = 0; i < n1; i++) {
+                    if (v0[i] != v1[i]) {
+                        as = 0;
+                        break;
+                    }
+                }
+            }
+        }
+        return as;
+    }
+    template <typename F, typename I>
+    int operator!=(const Vector<F, I>& v0,
+        const Vector<F, I>& v1)
+    {
+        int as = 1;
+        if (v0 == v1) {
+            as = 0;
+        }
+        return as;
+    }
+
     //重载向量减法
     template <typename F, typename I>
     inline Vector<F, I> operator-(const Vector<F, I>& v0,
@@ -156,6 +190,14 @@ namespace AlgebraObject {
         return r;
     }
 
+    template <typename F, typename I>
+    inline Vector<F, I> operator-=(Vector<F, I>& v0,
+        const Vector<F, I>& v1)
+    {
+        v0 = v0 - v1;
+        return v0;
+    }
+
     //重载向量加法
     template <typename F, typename I>
     inline Vector<F, I> operator+(const Vector<F, I>& v0,
@@ -166,6 +208,14 @@ namespace AlgebraObject {
             r[i] = v0[i] + v1[i];
         }
         return r;
+    }
+
+    template <typename F, typename I>
+    inline Vector<F, I> operator+=(Vector<F, I>& v0,
+        const Vector<F, I>& v1)
+    {
+        v0 = v0 + v1;
+        return v0;
     }
 
     //重载向量乘法，即数学中的点乘，对应相乘相加
@@ -200,6 +250,17 @@ namespace AlgebraObject {
         Vector<F, I> r(v1.size);
         for (auto i = 0; i < v1.size; i++) {
             r[i] = v0 * v1[i];
+        }
+        return r;
+    }
+
+    template <typename F, typename I>
+    inline Vector<F, I> operator/(const Vector<F, I>& v1,
+        const double& v0)
+    {
+        Vector<F, I> r(v1.size);
+        for (auto i = 0; i < v1.size; i++) {
+            r[i] = v1[i] / v0;
         }
         return r;
     }
