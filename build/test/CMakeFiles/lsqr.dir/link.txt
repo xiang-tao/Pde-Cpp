@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/lsqr.dir/lsqr.cpp.o  -o lsqr 

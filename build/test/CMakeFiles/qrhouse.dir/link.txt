@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/qrhouse.dir/qrhouse.cpp.o  -o qrhouse 

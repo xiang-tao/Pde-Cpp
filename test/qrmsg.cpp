@@ -4,9 +4,8 @@ using namespace std;
 
 int main()
 {
-    Vector v1 = { 1, 2, 3 };
-    v1 -= 3 * v1;
-    cout << v1 << endl;
+    Matrix m = get_givens<Matrix>(6, 2, 4, 1, -1);
+    cout << m << endl;
 
     return 0;
 }

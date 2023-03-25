@@ -111,109 +111,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/CMakeFiles/qrmsg.dir/rule:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/qrmsg.dir/rule
-.PHONY : test/CMakeFiles/qrmsg.dir/rule
+test/CMakeFiles/lsqr.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/lsqr.dir/rule
+.PHONY : test/CMakeFiles/lsqr.dir/rule
 
 # Convenience name for target.
-qrmsg: test/CMakeFiles/qrmsg.dir/rule
+lsqr: test/CMakeFiles/lsqr.dir/rule
 
-.PHONY : qrmsg
+.PHONY : lsqr
 
 # fast build rule for target.
-qrmsg/fast:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/qrmsg.dir/build.make test/CMakeFiles/qrmsg.dir/build
-.PHONY : qrmsg/fast
+lsqr/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/lsqr.dir/build.make test/CMakeFiles/lsqr.dir/build
+.PHONY : lsqr/fast
 
 # Convenience name for target.
-test/CMakeFiles/base_son.dir/rule:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/base_son.dir/rule
-.PHONY : test/CMakeFiles/base_son.dir/rule
+test/CMakeFiles/test.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test.dir/rule
+.PHONY : test/CMakeFiles/test.dir/rule
 
 # Convenience name for target.
-base_son: test/CMakeFiles/base_son.dir/rule
+test: test/CMakeFiles/test.dir/rule
 
-.PHONY : base_son
+.PHONY : test
 
 # fast build rule for target.
-base_son/fast:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/base_son.dir/build.make test/CMakeFiles/base_son.dir/build
-.PHONY : base_son/fast
-
-# Convenience name for target.
-test/CMakeFiles/hello.dir/rule:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/hello.dir/rule
-.PHONY : test/CMakeFiles/hello.dir/rule
-
-# Convenience name for target.
-hello: test/CMakeFiles/hello.dir/rule
-
-.PHONY : hello
-
-# fast build rule for target.
-hello/fast:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/build
-.PHONY : hello/fast
-
-# Convenience name for target.
-test/CMakeFiles/cmp.dir/rule:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/cmp.dir/rule
-.PHONY : test/CMakeFiles/cmp.dir/rule
-
-# Convenience name for target.
-cmp: test/CMakeFiles/cmp.dir/rule
-
-.PHONY : cmp
-
-# fast build rule for target.
-cmp/fast:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/cmp.dir/build.make test/CMakeFiles/cmp.dir/build
-.PHONY : cmp/fast
-
-# Convenience name for target.
-test/CMakeFiles/Cholesky.dir/rule:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/Cholesky.dir/rule
-.PHONY : test/CMakeFiles/Cholesky.dir/rule
-
-# Convenience name for target.
-Cholesky: test/CMakeFiles/Cholesky.dir/rule
-
-.PHONY : Cholesky
-
-# fast build rule for target.
-Cholesky/fast:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/Cholesky.dir/build.make test/CMakeFiles/Cholesky.dir/build
-.PHONY : Cholesky/fast
-
-# Convenience name for target.
-test/CMakeFiles/LU.dir/rule:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/LU.dir/rule
-.PHONY : test/CMakeFiles/LU.dir/rule
-
-# Convenience name for target.
-LU: test/CMakeFiles/LU.dir/rule
-
-.PHONY : LU
-
-# fast build rule for target.
-LU/fast:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/LU.dir/build.make test/CMakeFiles/LU.dir/build
-.PHONY : LU/fast
-
-# Convenience name for target.
-test/CMakeFiles/3d_plot.dir/rule:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/3d_plot.dir/rule
-.PHONY : test/CMakeFiles/3d_plot.dir/rule
-
-# Convenience name for target.
-3d_plot: test/CMakeFiles/3d_plot.dir/rule
-
-.PHONY : 3d_plot
-
-# fast build rule for target.
-3d_plot/fast:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/3d_plot.dir/build.make test/CMakeFiles/3d_plot.dir/build
-.PHONY : 3d_plot/fast
+test/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/test.dir/build.make test/CMakeFiles/test.dir/build
+.PHONY : test/fast
 
 # Convenience name for target.
 test/CMakeFiles/animation.dir/rule:
@@ -231,19 +156,169 @@ animation/fast:
 .PHONY : animation/fast
 
 # Convenience name for target.
-test/CMakeFiles/test.dir/rule:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test.dir/rule
-.PHONY : test/CMakeFiles/test.dir/rule
+test/CMakeFiles/3d_plot.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/3d_plot.dir/rule
+.PHONY : test/CMakeFiles/3d_plot.dir/rule
 
 # Convenience name for target.
-test: test/CMakeFiles/test.dir/rule
+3d_plot: test/CMakeFiles/3d_plot.dir/rule
 
-.PHONY : test
+.PHONY : 3d_plot
 
 # fast build rule for target.
-test/fast:
-	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/test.dir/build.make test/CMakeFiles/test.dir/build
-.PHONY : test/fast
+3d_plot/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/3d_plot.dir/build.make test/CMakeFiles/3d_plot.dir/build
+.PHONY : 3d_plot/fast
+
+# Convenience name for target.
+test/CMakeFiles/LU.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/LU.dir/rule
+.PHONY : test/CMakeFiles/LU.dir/rule
+
+# Convenience name for target.
+LU: test/CMakeFiles/LU.dir/rule
+
+.PHONY : LU
+
+# fast build rule for target.
+LU/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/LU.dir/build.make test/CMakeFiles/LU.dir/build
+.PHONY : LU/fast
+
+# Convenience name for target.
+test/CMakeFiles/fem_pde.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/fem_pde.dir/rule
+.PHONY : test/CMakeFiles/fem_pde.dir/rule
+
+# Convenience name for target.
+fem_pde: test/CMakeFiles/fem_pde.dir/rule
+
+.PHONY : fem_pde
+
+# fast build rule for target.
+fem_pde/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/fem_pde.dir/build.make test/CMakeFiles/fem_pde.dir/build
+.PHONY : fem_pde/fast
+
+# Convenience name for target.
+test/CMakeFiles/Cholesky.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/Cholesky.dir/rule
+.PHONY : test/CMakeFiles/Cholesky.dir/rule
+
+# Convenience name for target.
+Cholesky: test/CMakeFiles/Cholesky.dir/rule
+
+.PHONY : Cholesky
+
+# fast build rule for target.
+Cholesky/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/Cholesky.dir/build.make test/CMakeFiles/Cholesky.dir/build
+.PHONY : Cholesky/fast
+
+# Convenience name for target.
+test/CMakeFiles/hello.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/hello.dir/rule
+.PHONY : test/CMakeFiles/hello.dir/rule
+
+# Convenience name for target.
+hello: test/CMakeFiles/hello.dir/rule
+
+.PHONY : hello
+
+# fast build rule for target.
+hello/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/build
+.PHONY : hello/fast
+
+# Convenience name for target.
+test/CMakeFiles/base_son.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/base_son.dir/rule
+.PHONY : test/CMakeFiles/base_son.dir/rule
+
+# Convenience name for target.
+base_son: test/CMakeFiles/base_son.dir/rule
+
+.PHONY : base_son
+
+# fast build rule for target.
+base_son/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/base_son.dir/build.make test/CMakeFiles/base_son.dir/build
+.PHONY : base_son/fast
+
+# Convenience name for target.
+test/CMakeFiles/qrhouse.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/qrhouse.dir/rule
+.PHONY : test/CMakeFiles/qrhouse.dir/rule
+
+# Convenience name for target.
+qrhouse: test/CMakeFiles/qrhouse.dir/rule
+
+.PHONY : qrhouse
+
+# fast build rule for target.
+qrhouse/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/qrhouse.dir/build.make test/CMakeFiles/qrhouse.dir/build
+.PHONY : qrhouse/fast
+
+# Convenience name for target.
+test/CMakeFiles/qrmsg.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/qrmsg.dir/rule
+.PHONY : test/CMakeFiles/qrmsg.dir/rule
+
+# Convenience name for target.
+qrmsg: test/CMakeFiles/qrmsg.dir/rule
+
+.PHONY : qrmsg
+
+# fast build rule for target.
+qrmsg/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/qrmsg.dir/build.make test/CMakeFiles/qrmsg.dir/build
+.PHONY : qrmsg/fast
+
+# Convenience name for target.
+test/CMakeFiles/cmp.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/cmp.dir/rule
+.PHONY : test/CMakeFiles/cmp.dir/rule
+
+# Convenience name for target.
+cmp: test/CMakeFiles/cmp.dir/rule
+
+.PHONY : cmp
+
+# fast build rule for target.
+cmp/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/cmp.dir/build.make test/CMakeFiles/cmp.dir/build
+.PHONY : cmp/fast
+
+# Convenience name for target.
+test/CMakeFiles/householder.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/householder.dir/rule
+.PHONY : test/CMakeFiles/householder.dir/rule
+
+# Convenience name for target.
+householder: test/CMakeFiles/householder.dir/rule
+
+.PHONY : householder
+
+# fast build rule for target.
+householder/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/householder.dir/build.make test/CMakeFiles/householder.dir/build
+.PHONY : householder/fast
+
+# Convenience name for target.
+test/CMakeFiles/qrgivens.dir/rule:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/qrgivens.dir/rule
+.PHONY : test/CMakeFiles/qrgivens.dir/rule
+
+# Convenience name for target.
+qrgivens: test/CMakeFiles/qrgivens.dir/rule
+
+.PHONY : qrgivens
+
+# fast build rule for target.
+qrgivens/fast:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/qrgivens.dir/build.make test/CMakeFiles/qrgivens.dir/build
+.PHONY : qrgivens/fast
 
 3d_plot.o: 3d_plot.cpp.o
 
@@ -407,6 +482,33 @@ cmp.cpp.s:
 	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/cmp.dir/build.make test/CMakeFiles/cmp.dir/cmp.cpp.s
 .PHONY : cmp.cpp.s
 
+fem_pde.o: fem_pde.cpp.o
+
+.PHONY : fem_pde.o
+
+# target to build an object file
+fem_pde.cpp.o:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/fem_pde.dir/build.make test/CMakeFiles/fem_pde.dir/fem_pde.cpp.o
+.PHONY : fem_pde.cpp.o
+
+fem_pde.i: fem_pde.cpp.i
+
+.PHONY : fem_pde.i
+
+# target to preprocess a source file
+fem_pde.cpp.i:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/fem_pde.dir/build.make test/CMakeFiles/fem_pde.dir/fem_pde.cpp.i
+.PHONY : fem_pde.cpp.i
+
+fem_pde.s: fem_pde.cpp.s
+
+.PHONY : fem_pde.s
+
+# target to generate assembly for a file
+fem_pde.cpp.s:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/fem_pde.dir/build.make test/CMakeFiles/fem_pde.dir/fem_pde.cpp.s
+.PHONY : fem_pde.cpp.s
+
 hello.o: hello.cpp.o
 
 .PHONY : hello.o
@@ -433,6 +535,114 @@ hello.s: hello.cpp.s
 hello.cpp.s:
 	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/hello.cpp.s
 .PHONY : hello.cpp.s
+
+householder.o: householder.cpp.o
+
+.PHONY : householder.o
+
+# target to build an object file
+householder.cpp.o:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/householder.dir/build.make test/CMakeFiles/householder.dir/householder.cpp.o
+.PHONY : householder.cpp.o
+
+householder.i: householder.cpp.i
+
+.PHONY : householder.i
+
+# target to preprocess a source file
+householder.cpp.i:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/householder.dir/build.make test/CMakeFiles/householder.dir/householder.cpp.i
+.PHONY : householder.cpp.i
+
+householder.s: householder.cpp.s
+
+.PHONY : householder.s
+
+# target to generate assembly for a file
+householder.cpp.s:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/householder.dir/build.make test/CMakeFiles/householder.dir/householder.cpp.s
+.PHONY : householder.cpp.s
+
+lsqr.o: lsqr.cpp.o
+
+.PHONY : lsqr.o
+
+# target to build an object file
+lsqr.cpp.o:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/lsqr.dir/build.make test/CMakeFiles/lsqr.dir/lsqr.cpp.o
+.PHONY : lsqr.cpp.o
+
+lsqr.i: lsqr.cpp.i
+
+.PHONY : lsqr.i
+
+# target to preprocess a source file
+lsqr.cpp.i:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/lsqr.dir/build.make test/CMakeFiles/lsqr.dir/lsqr.cpp.i
+.PHONY : lsqr.cpp.i
+
+lsqr.s: lsqr.cpp.s
+
+.PHONY : lsqr.s
+
+# target to generate assembly for a file
+lsqr.cpp.s:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/lsqr.dir/build.make test/CMakeFiles/lsqr.dir/lsqr.cpp.s
+.PHONY : lsqr.cpp.s
+
+qrgivens.o: qrgivens.cpp.o
+
+.PHONY : qrgivens.o
+
+# target to build an object file
+qrgivens.cpp.o:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/qrgivens.dir/build.make test/CMakeFiles/qrgivens.dir/qrgivens.cpp.o
+.PHONY : qrgivens.cpp.o
+
+qrgivens.i: qrgivens.cpp.i
+
+.PHONY : qrgivens.i
+
+# target to preprocess a source file
+qrgivens.cpp.i:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/qrgivens.dir/build.make test/CMakeFiles/qrgivens.dir/qrgivens.cpp.i
+.PHONY : qrgivens.cpp.i
+
+qrgivens.s: qrgivens.cpp.s
+
+.PHONY : qrgivens.s
+
+# target to generate assembly for a file
+qrgivens.cpp.s:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/qrgivens.dir/build.make test/CMakeFiles/qrgivens.dir/qrgivens.cpp.s
+.PHONY : qrgivens.cpp.s
+
+qrhouse.o: qrhouse.cpp.o
+
+.PHONY : qrhouse.o
+
+# target to build an object file
+qrhouse.cpp.o:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/qrhouse.dir/build.make test/CMakeFiles/qrhouse.dir/qrhouse.cpp.o
+.PHONY : qrhouse.cpp.o
+
+qrhouse.i: qrhouse.cpp.i
+
+.PHONY : qrhouse.i
+
+# target to preprocess a source file
+qrhouse.cpp.i:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/qrhouse.dir/build.make test/CMakeFiles/qrhouse.dir/qrhouse.cpp.i
+.PHONY : qrhouse.cpp.i
+
+qrhouse.s: qrhouse.cpp.s
+
+.PHONY : qrhouse.s
+
+# target to generate assembly for a file
+qrhouse.cpp.s:
+	cd /home/xt/github/Pde-Cpp/build && $(MAKE) -f test/CMakeFiles/qrhouse.dir/build.make test/CMakeFiles/qrhouse.dir/qrhouse.cpp.s
+.PHONY : qrhouse.cpp.s
 
 qrmsg.o: qrmsg.cpp.o
 
@@ -494,17 +704,22 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... qrmsg"
-	@echo "... base_son"
-	@echo "... hello"
-	@echo "... cmp"
-	@echo "... Cholesky"
-	@echo "... LU"
 	@echo "... rebuild_cache"
-	@echo "... 3d_plot"
-	@echo "... animation"
 	@echo "... edit_cache"
+	@echo "... lsqr"
 	@echo "... test"
+	@echo "... animation"
+	@echo "... 3d_plot"
+	@echo "... LU"
+	@echo "... fem_pde"
+	@echo "... Cholesky"
+	@echo "... hello"
+	@echo "... base_son"
+	@echo "... qrhouse"
+	@echo "... qrmsg"
+	@echo "... cmp"
+	@echo "... householder"
+	@echo "... qrgivens"
 	@echo "... 3d_plot.o"
 	@echo "... 3d_plot.i"
 	@echo "... 3d_plot.s"
@@ -523,9 +738,24 @@ help:
 	@echo "... cmp.o"
 	@echo "... cmp.i"
 	@echo "... cmp.s"
+	@echo "... fem_pde.o"
+	@echo "... fem_pde.i"
+	@echo "... fem_pde.s"
 	@echo "... hello.o"
 	@echo "... hello.i"
 	@echo "... hello.s"
+	@echo "... householder.o"
+	@echo "... householder.i"
+	@echo "... householder.s"
+	@echo "... lsqr.o"
+	@echo "... lsqr.i"
+	@echo "... lsqr.s"
+	@echo "... qrgivens.o"
+	@echo "... qrgivens.i"
+	@echo "... qrgivens.s"
+	@echo "... qrhouse.o"
+	@echo "... qrhouse.i"
+	@echo "... qrhouse.s"
 	@echo "... qrmsg.o"
 	@echo "... qrmsg.i"
 	@echo "... qrmsg.s"

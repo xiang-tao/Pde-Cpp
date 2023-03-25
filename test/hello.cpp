@@ -10,7 +10,8 @@ int main()
     int n = A.shape[1];
     Matrix Q(m, n);
     Matrix R(n, n);
-    qr_mgs<Matrix, Vector>(A, Q, R);
+    qr_house<Matrix, Vector>(A, Q, R);
+    // qr_givens<Matrix>(A, Q, R);
     cout << A << endl;
     cout << Q << endl;
     cout << R << endl;

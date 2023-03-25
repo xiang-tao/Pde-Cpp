@@ -1,15 +1,16 @@
 #include "thirdparty/matplotlibcpp.h"
 namespace plt = matplotlibcpp;
+#include <Constants.h>
 
 int main()
 {
     std::vector<std::vector<double>> x, y, z;
-    for (double i = -5; i <= 5; i += 0.25) {
+    for (double i = 0; i <= 1; i += 0.02) {
         std::vector<double> x_row, y_row, z_row;
-        for (double j = -5; j <= 5; j += 0.25) {
+        for (double j = 0; j <= 1; j += 0.02) {
             x_row.push_back(i);
             y_row.push_back(j);
-            z_row.push_back(::std::sin(::std::hypot(i, j)));
+            z_row.push_back(::std::sin(Constant::pi * i) * ::std::sin(Constant::pi * j));
         }
         x.push_back(x_row);
         y.push_back(y_row);

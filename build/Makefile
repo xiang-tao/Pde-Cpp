@@ -111,95 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named qrmsg
+# Target rules for targets named lsqr
 
 # Build rule for target.
-qrmsg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 qrmsg
-.PHONY : qrmsg
+lsqr: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lsqr
+.PHONY : lsqr
 
 # fast build rule for target.
-qrmsg/fast:
-	$(MAKE) -f test/CMakeFiles/qrmsg.dir/build.make test/CMakeFiles/qrmsg.dir/build
-.PHONY : qrmsg/fast
+lsqr/fast:
+	$(MAKE) -f test/CMakeFiles/lsqr.dir/build.make test/CMakeFiles/lsqr.dir/build
+.PHONY : lsqr/fast
 
 #=============================================================================
-# Target rules for targets named base_son
+# Target rules for targets named test
 
 # Build rule for target.
-base_son: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 base_son
-.PHONY : base_son
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test
+.PHONY : test
 
 # fast build rule for target.
-base_son/fast:
-	$(MAKE) -f test/CMakeFiles/base_son.dir/build.make test/CMakeFiles/base_son.dir/build
-.PHONY : base_son/fast
-
-#=============================================================================
-# Target rules for targets named hello
-
-# Build rule for target.
-hello: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 hello
-.PHONY : hello
-
-# fast build rule for target.
-hello/fast:
-	$(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/build
-.PHONY : hello/fast
-
-#=============================================================================
-# Target rules for targets named cmp
-
-# Build rule for target.
-cmp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cmp
-.PHONY : cmp
-
-# fast build rule for target.
-cmp/fast:
-	$(MAKE) -f test/CMakeFiles/cmp.dir/build.make test/CMakeFiles/cmp.dir/build
-.PHONY : cmp/fast
-
-#=============================================================================
-# Target rules for targets named Cholesky
-
-# Build rule for target.
-Cholesky: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Cholesky
-.PHONY : Cholesky
-
-# fast build rule for target.
-Cholesky/fast:
-	$(MAKE) -f test/CMakeFiles/Cholesky.dir/build.make test/CMakeFiles/Cholesky.dir/build
-.PHONY : Cholesky/fast
-
-#=============================================================================
-# Target rules for targets named LU
-
-# Build rule for target.
-LU: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 LU
-.PHONY : LU
-
-# fast build rule for target.
-LU/fast:
-	$(MAKE) -f test/CMakeFiles/LU.dir/build.make test/CMakeFiles/LU.dir/build
-.PHONY : LU/fast
-
-#=============================================================================
-# Target rules for targets named 3d_plot
-
-# Build rule for target.
-3d_plot: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 3d_plot
-.PHONY : 3d_plot
-
-# fast build rule for target.
-3d_plot/fast:
-	$(MAKE) -f test/CMakeFiles/3d_plot.dir/build.make test/CMakeFiles/3d_plot.dir/build
-.PHONY : 3d_plot/fast
+test/fast:
+	$(MAKE) -f test/CMakeFiles/test.dir/build.make test/CMakeFiles/test.dir/build
+.PHONY : test/fast
 
 #=============================================================================
 # Target rules for targets named animation
@@ -215,17 +150,147 @@ animation/fast:
 .PHONY : animation/fast
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named 3d_plot
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
+3d_plot: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 3d_plot
+.PHONY : 3d_plot
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) -f test/CMakeFiles/test.dir/build.make test/CMakeFiles/test.dir/build
-.PHONY : test/fast
+3d_plot/fast:
+	$(MAKE) -f test/CMakeFiles/3d_plot.dir/build.make test/CMakeFiles/3d_plot.dir/build
+.PHONY : 3d_plot/fast
+
+#=============================================================================
+# Target rules for targets named LU
+
+# Build rule for target.
+LU: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LU
+.PHONY : LU
+
+# fast build rule for target.
+LU/fast:
+	$(MAKE) -f test/CMakeFiles/LU.dir/build.make test/CMakeFiles/LU.dir/build
+.PHONY : LU/fast
+
+#=============================================================================
+# Target rules for targets named fem_pde
+
+# Build rule for target.
+fem_pde: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fem_pde
+.PHONY : fem_pde
+
+# fast build rule for target.
+fem_pde/fast:
+	$(MAKE) -f test/CMakeFiles/fem_pde.dir/build.make test/CMakeFiles/fem_pde.dir/build
+.PHONY : fem_pde/fast
+
+#=============================================================================
+# Target rules for targets named Cholesky
+
+# Build rule for target.
+Cholesky: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Cholesky
+.PHONY : Cholesky
+
+# fast build rule for target.
+Cholesky/fast:
+	$(MAKE) -f test/CMakeFiles/Cholesky.dir/build.make test/CMakeFiles/Cholesky.dir/build
+.PHONY : Cholesky/fast
+
+#=============================================================================
+# Target rules for targets named hello
+
+# Build rule for target.
+hello: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hello
+.PHONY : hello
+
+# fast build rule for target.
+hello/fast:
+	$(MAKE) -f test/CMakeFiles/hello.dir/build.make test/CMakeFiles/hello.dir/build
+.PHONY : hello/fast
+
+#=============================================================================
+# Target rules for targets named base_son
+
+# Build rule for target.
+base_son: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 base_son
+.PHONY : base_son
+
+# fast build rule for target.
+base_son/fast:
+	$(MAKE) -f test/CMakeFiles/base_son.dir/build.make test/CMakeFiles/base_son.dir/build
+.PHONY : base_son/fast
+
+#=============================================================================
+# Target rules for targets named qrhouse
+
+# Build rule for target.
+qrhouse: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 qrhouse
+.PHONY : qrhouse
+
+# fast build rule for target.
+qrhouse/fast:
+	$(MAKE) -f test/CMakeFiles/qrhouse.dir/build.make test/CMakeFiles/qrhouse.dir/build
+.PHONY : qrhouse/fast
+
+#=============================================================================
+# Target rules for targets named qrmsg
+
+# Build rule for target.
+qrmsg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 qrmsg
+.PHONY : qrmsg
+
+# fast build rule for target.
+qrmsg/fast:
+	$(MAKE) -f test/CMakeFiles/qrmsg.dir/build.make test/CMakeFiles/qrmsg.dir/build
+.PHONY : qrmsg/fast
+
+#=============================================================================
+# Target rules for targets named cmp
+
+# Build rule for target.
+cmp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cmp
+.PHONY : cmp
+
+# fast build rule for target.
+cmp/fast:
+	$(MAKE) -f test/CMakeFiles/cmp.dir/build.make test/CMakeFiles/cmp.dir/build
+.PHONY : cmp/fast
+
+#=============================================================================
+# Target rules for targets named householder
+
+# Build rule for target.
+householder: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 householder
+.PHONY : householder
+
+# fast build rule for target.
+householder/fast:
+	$(MAKE) -f test/CMakeFiles/householder.dir/build.make test/CMakeFiles/householder.dir/build
+.PHONY : householder/fast
+
+#=============================================================================
+# Target rules for targets named qrgivens
+
+# Build rule for target.
+qrgivens: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 qrgivens
+.PHONY : qrgivens
+
+# fast build rule for target.
+qrgivens/fast:
+	$(MAKE) -f test/CMakeFiles/qrgivens.dir/build.make test/CMakeFiles/qrgivens.dir/build
+.PHONY : qrgivens/fast
 
 # Help Target
 help:
@@ -235,15 +300,20 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... qrmsg"
-	@echo "... base_son"
-	@echo "... hello"
-	@echo "... cmp"
-	@echo "... Cholesky"
-	@echo "... LU"
-	@echo "... 3d_plot"
-	@echo "... animation"
+	@echo "... lsqr"
 	@echo "... test"
+	@echo "... animation"
+	@echo "... 3d_plot"
+	@echo "... LU"
+	@echo "... fem_pde"
+	@echo "... Cholesky"
+	@echo "... hello"
+	@echo "... base_son"
+	@echo "... qrhouse"
+	@echo "... qrmsg"
+	@echo "... cmp"
+	@echo "... householder"
+	@echo "... qrgivens"
 .PHONY : help
 
 

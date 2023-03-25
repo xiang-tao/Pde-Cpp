@@ -120,6 +120,16 @@ namespace AlgebraObject {
             return std::sqrt(sum);
         }
 
+        F max() const
+        {
+            F m = data[0];
+            for (I i = 1; i < size; i++) {
+                if (m < data[i])
+                    m = data[i];
+            }
+            return m;
+        }
+
         F& operator[](const I i)
         {
             //这里可能会存在较大的开销，故关闭最好，使用时候小心越界即可
@@ -218,7 +228,7 @@ namespace AlgebraObject {
         return v0;
     }
 
-    //重载向量乘法，即数学中的点乘，对应相乘相加
+    //重载向量乘法，即数学中的点乘，对应相乘相加，相当于计算内积
     template <typename F, typename I>
     inline double operator*(const Vector<F, I>& v0,
         const Vector<F, I>& v1)

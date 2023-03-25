@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+../include/Constants.h
+cmath
+-
+limits
+-
+string
+-
+
 ../include/thirdparty/matplotlibcpp.h
 Python.h
 -
@@ -37,6 +45,8 @@ opencv2/opencv.hpp
 /home/xt/github/Pde-Cpp/test/3d_plot.cpp
 thirdparty/matplotlibcpp.h
 /home/xt/github/Pde-Cpp/test/thirdparty/matplotlibcpp.h
+Constants.h
+-
 
 /usr/include/python3.8/Python.h
 patchlevel.h
